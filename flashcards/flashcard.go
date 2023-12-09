@@ -9,7 +9,11 @@ import (
 	"github.com/Drill-Byte/cli-flashcards/storage"
 )
 
-func ShuffleFlashcards(flashcards map[string]string) []string {
+func GetFlashcards() map[string]string {
+	return storage.Flashcards
+}
+
+func GetShuffledFlashcards(flashcards map[string]string) []string {
 	keys := make([]string, 0, len(flashcards))
 	for key := range flashcards {
 		keys = append(keys, key)
@@ -22,14 +26,6 @@ func ShuffleFlashcards(flashcards map[string]string) []string {
 	})
 
 	return keys
-}
-
-func GetFlashcards() map[string]string {
-	return storage.Flashcards
-}
-
-func GetShuffledFlashcards() []string {
-	return ShuffleFlashcards(storage.Flashcards)
 }
 
 func PrintFlashCards(

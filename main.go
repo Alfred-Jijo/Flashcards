@@ -14,7 +14,7 @@ func main() {
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
 	fmt.Println("Press 'Enter' to reveal the answer...")
-	shuffledFlashcards := flachcards.GetShuffledFlashcards()
+	shuffledFlashcards := flachcards.GetShuffledFlashcards(flashcards)
 
 	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
 
