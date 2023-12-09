@@ -6,6 +6,8 @@ import (
 	"math/rand"
 	"os"
 	"time"
+
+	"github.com/Drill-Byte/cli-flashcards/types"
 )
 
 func shuffleFlashcards(flashcards map[string]string) []string {
@@ -23,13 +25,7 @@ func shuffleFlashcards(flashcards map[string]string) []string {
 }
 
 func main() {
-	flashcards := map[string]string{
-		"Question 1": "Answer 1",
-		"Question 2": "Answer 2",
-		"Question 3": "Answer 3",
-		// Add more flashcards as needed
-	}
-
+	flashcards := types.GetFlashcards()
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
