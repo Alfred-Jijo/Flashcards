@@ -1,6 +1,8 @@
 package flachcards
 
 import (
+	"bufio"
+	"fmt"
 	"math/rand"
 	"time"
 )
@@ -33,4 +35,17 @@ func GetFlashcards() map[string]string {
 
 func GetShuffledFlashcards() []string {
 	return ShuffleFlashcards(flashcards)
+}
+
+func PrintFlashCards(
+	flashcards map[string]string,
+	shuffledFlashcards []string,
+	scanner *bufio.Scanner,
+) {
+	for _, question := range shuffledFlashcards {
+		fmt.Printf("Q: %s\n", question)
+		fmt.Print("Press 'Enter' to reveal the answer...")
+		scanner.Scan()
+		fmt.Printf("A: %s\n\n", flashcards[question])
+	}
 }
