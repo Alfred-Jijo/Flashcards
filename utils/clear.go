@@ -5,7 +5,7 @@ import (
 	"os/exec"
 )
 
-func Clear() {
+func WindowsClear() {
 	cmd := exec.Command("cmd", "/c", "cls")
 	cmd.Stdout = os.Stdout
 	cmd.Run()

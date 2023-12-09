@@ -40,7 +40,7 @@ func PrintFlashCards(
 		scanner.Scan()
 		fmt.Printf("A: %s\n\n", card.Answer)
 		scanner.Scan()
-		utils.Clear()
+		utils.WindowsClear()
 	}
 	// for _, question := range shuffledFlashcards {
 	// 	fmt.Printf("Q: %s\n", question)
