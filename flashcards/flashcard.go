@@ -6,13 +6,10 @@ import (
 )
 
 var flashcards = map[string]string{
-	"Question 1": "Answer 1",
-	"Question 2": "Answer 2",
-	"Question 3": "Answer 3",
-	// Add more flashcards as needed
-	"Question 4": "Answer 4",
-	"Question 5": "Answer 5",
-	"Question 6": "Answer 6",
+	"Quantity":            "In S.I. a quantity is represented by a number and a unit, (e.g. m = 3.0 kg).",
+	"Vector":              "A vector is a quantity that has magnitude and direction.",
+	"Newton's First Law":  "A body will remain in uniform motion in a straight line unless acted on by an external force.",
+	"Newton's Second Law": "The rate of change of a body’s momentum is directly proportional to the force active upon it.",
 }
 
 func ShuffleFlashcards(flashcards map[string]string) []string {
