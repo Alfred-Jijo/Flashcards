@@ -1,4 +1,4 @@
-package types
+package flachcards
 
 import (
 	"math/rand"

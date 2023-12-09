@@ -4,15 +4,16 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
+	flachcards "github.com/Drill-Byte/cli-flashcards/flashcards"
 )
 
 func main() {
-	flashcards := flashcards.GetFlashcards()
+	flashcards := flachcards.GetFlashcards()
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
-
-	shuffledFlashcards := flashcards.GetShuffledFlashcards(flashcards)
+	shuffledFlashcards := flachcards.GetShuffledFlashcards()
 
 	for _, question := range shuffledFlashcards {
 		fmt.Printf("Q: %s\n", question)
