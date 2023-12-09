@@ -5,14 +5,9 @@ import (
 	"fmt"
 	"math/rand"
 	"time"
-)
 
-var flashcards = map[string]string{
-	"What is a Quantity":  "In S.I. a quantity is represented by a number and a unit, (e.g. m = 3.0 kg).",
-	"What is a Vector":    "A vector is a quantity that has magnitude and direction.",
-	"Newton's First Law":  "A body will remain in uniform motion in a straight line unless acted on by an external force.",
-	"Newton's Second Law": "The rate of change of a body's momentum is directly proportional to the force active upon it.",
-}
+	"github.com/Drill-Byte/cli-flashcards/storage"
+)
 
 func ShuffleFlashcards(flashcards map[string]string) []string {
 	keys := make([]string, 0, len(flashcards))
@@ -30,11 +25,11 @@ func ShuffleFlashcards(flashcards map[string]string) []string {
 }
 
 func GetFlashcards() map[string]string {
-	return flashcards
+	return storage.Flashcards
 }
 
 func GetShuffledFlashcards() []string {
-	return ShuffleFlashcards(flashcards)
+	return ShuffleFlashcards(storage.Flashcards)
 }
 
 func PrintFlashCards(
@@ -44,7 +39,6 @@ func PrintFlashCards(
 ) {
 	for _, question := range shuffledFlashcards {
 		fmt.Printf("Q: %s\n", question)
-		fmt.Print("Press 'Enter' to reveal the answer...")
 		scanner.Scan()
 		fmt.Printf("A: %s\n\n", flashcards[question])
 	}
