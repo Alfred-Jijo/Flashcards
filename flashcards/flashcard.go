@@ -7,6 +7,7 @@ import (
 	"time"
 
 	"github.com/Drill-Byte/cli-flashcards/storage"
+	"github.com/Drill-Byte/cli-flashcards/utils"
 )
 
 func GetFlashcards() map[string]storage.Flashcard {
@@ -38,6 +39,8 @@ func PrintFlashCards(
 		fmt.Printf("Q: %s\n", card.Question)
 		scanner.Scan()
 		fmt.Printf("A: %s\n\n", card.Answer)
+		scanner.Scan()
+		utils.Clear()
 	}
 	// for _, question := range shuffledFlashcards {
 	// 	fmt.Printf("Q: %s\n", question)
