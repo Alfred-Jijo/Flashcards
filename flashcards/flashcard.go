@@ -33,10 +33,15 @@ func PrintFlashCards(
 	shuffledFlashcards []string,
 	scanner *bufio.Scanner,
 ) {
-	for _, question := range shuffledFlashcards {
-		fmt.Printf("Q: %s\n", question)
+	for _, card := range flashcards {
+		fmt.Printf("Q: %s\n", card.Question)
 		scanner.Scan()
-		fmt.Printf("A: %s\n\n", flashcards[question])
-		//fmt.Printf("Q: %s\n\nA: %s\n\n", card.Question, card.Answer)
+		fmt.Printf("A: %s\n\n", card.Answer)
 	}
+	// for _, question := range shuffledFlashcards {
+	// 	fmt.Printf("Q: %s\n", question)
+	// 	scanner.Scan()
+	// 	fmt.Printf("A: %s\n\n", flashcards[question])
+	// 	//fmt.Printf("Q: %s\n\nA: %s\n\n", card.Question, card.Answer)
+	// }
 }
