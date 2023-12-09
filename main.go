@@ -3,34 +3,16 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"math/rand"
 	"os"
-	"time"
-
-	"github.com/Drill-Byte/cli-flashcards/types"
 )
 
-func shuffleFlashcards(flashcards map[string]string) []string {
-	keys := make([]string, 0, len(flashcards))
-	for key := range flashcards {
-		keys = append(keys, key)
-	}
-
-	rand.Seed(time.Now().UnixNano())
-	rand.Shuffle(len(keys), func(i, j int) {
-		keys[i], keys[j] = keys[j], keys[i]
-	})
-
-	return keys
-}
-
 func main() {
-	flashcards := types.GetFlashcards()
+	flashcards := flashcards.GetFlashcards()
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
 
-	shuffledFlashcards := shuffleFlashcards(flashcards)
+	shuffledFlashcards := flashcards.GetShuffledFlashcards(flashcards)
 
 	for _, question := range shuffledFlashcards {
 		fmt.Printf("Q: %s\n", question)
