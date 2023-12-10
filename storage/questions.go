@@ -22,5 +22,16 @@ var Flashcards = map[string]Flashcard{
 		Question: "Newton's Second Law",
 		Answer:   "The rate of change of a body's momentum is directly proportional to the force active upon it.",
 	},
+	"Question_Five": {
+		Question: "Newton's Third Law",
+		Answer:   "If a body A exerts a force on a body B, then B exerts an equal and opposite force on A that is of the same type.",
+	},
+	"Question_Six": {
+		Question: "Resolving a Vector into components in paticular directions",
+		Answer: `Resolving a  vector into components in particular directions
+		This means finding vectors (the so-called components) in these directions,
+		which add together vectorially to make the original vector, and so,
+		together, are equivalent to this vector.`,
+	},
 	// Add more flashcards as needed...
 }
