@@ -33,5 +33,11 @@ var Flashcards = map[string]Flashcard{
 		which add together vectorially to make the original vector, and so,
 		together, are equivalent to this vector.`,
 	},
+	"Question_Seven": {
+		Question: "Density of a material",
+		Answer: `Density is Mass / Volume 
+		The Mass per Unit volume is kgm^-3
+		in which mass and volume apple to any sample of the material`,
+	},
 	// Add more flashcards as needed...
 }
