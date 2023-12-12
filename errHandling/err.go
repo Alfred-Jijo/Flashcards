@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func Check(err error) {
+func ErrHandle(err error) {
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
