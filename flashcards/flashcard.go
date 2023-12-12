@@ -42,14 +42,4 @@ func PrintFlashCards(
 		scanner.Scan()
 		utils.ClearTerminal()
 	}
-	// for _, question := range shuffledFlashcards {
-	// 	fmt.Printf("Q: %s\n", question)
-	// 	scanner.Scan()
-	// 	fmt.Printf("A: %s\n\n", flashcards[question])
-	// 	//fmt.Printf("Q: %s\n\nA: %s\n\n", card.Question, card.Answer)
-	// }
 }
-
-// func AddFlashcard() {
-
-// }
