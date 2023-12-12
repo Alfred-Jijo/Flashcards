@@ -43,3 +43,30 @@ func PrintFlashCards(
 		utils.ClearTerminal()
 	}
 }
+
+func AddFlashcard(Flashcards map[string]storage.Flashcard, scanner *bufio.Scanner) error {
+
+	key := fmt.Sprintf("Question_%d", len(Flashcards)+1)
+
+	if _, exists := Flashcards[key]; exists {
+		return fmt.Errorf("flashcard with the key '%s' already exists", key)
+	}
+
+	fmt.Print("Enter the question for the new flashcard: ")
+	scanner.Scan()
+	question := scanner.Text()
+
+	fmt.Print("Enter the answer for the new flashcard: ")
+	scanner.Scan()
+	answer := scanner.Text()
+
+	newFlashcard := storage.Flashcard{
+		Question: question,
+		Answer:   answer,
+	}
+
+	Flashcards[key] = newFlashcard
+
+	fmt.Println("Flashcard added successfully!")
+	return nil
+}
