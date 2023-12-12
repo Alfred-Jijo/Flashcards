@@ -14,9 +14,16 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
-	shuffledFlashcards := flachcards.GetShuffledFlashcards()
+	for {
+		shuffledFlashcards := flachcards.GetShuffledFlashcards()
 
-	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
+		flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
+
+		var input = scanner.Text()
+		if input == "quit" {
+			break
+		}
+	}
 
 	fmt.Println("Flashcard Quiz completed. Goodbye!")
 }
