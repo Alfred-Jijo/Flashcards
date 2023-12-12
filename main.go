@@ -17,6 +17,7 @@ func main() {
 	fmt.Println("Welcome to the Flashcard Quiz!")
 
 	for {
+		// !TODO: adding only works for curr session
 		fmt.Print("Would you like to add a flashcard? (y/n): ")
 		scanner.Scan()
 		answer := scanner.Text()
