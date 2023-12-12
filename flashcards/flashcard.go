@@ -49,3 +49,7 @@ func PrintFlashCards(
 	// 	//fmt.Printf("Q: %s\n\nA: %s\n\n", card.Question, card.Answer)
 	// }
 }
+
+// func AddFlashcard() {
+
+// }
