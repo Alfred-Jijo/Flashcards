@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 
+	handle "github.com/Drill-Byte/cli-flashcards/errHandling"
 	flachcards "github.com/Drill-Byte/cli-flashcards/flashcards"
 )
 
@@ -14,16 +15,23 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
+
 	for {
-		shuffledFlashcards := flachcards.GetShuffledFlashcards()
-
-		flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
-
-		var input = scanner.Text()
-		if input == "quit" {
+		fmt.Print("Would you like to add a flashcard? (y/n): ")
+		scanner.Scan()
+		answer := scanner.Text()
+		if answer == "y" {
+			err := flachcards.AddFlashcard(flashcards, scanner)
+			handle.Check(err)
+		} else if answer == "n" {
 			break
+		} else {
+			fmt.Println("Invalid input. Please enter 'y' or 'n'.")
 		}
 	}
+	shuffledFlashcards := flachcards.GetShuffledFlashcards()
+
+	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
 
 	fmt.Println("Flashcard Quiz completed. Goodbye!")
 }
