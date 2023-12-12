@@ -14,9 +14,9 @@ func GetFlashcards() map[string]storage.Flashcard {
 	return storage.Flashcards
 }
 
-func GetShuffledFlashcards(flashcards map[string]storage.Flashcard) []string {
-	keys := make([]string, 0, len(flashcards))
-	for key := range flashcards {
+func GetShuffledFlashcards() []string {
+	keys := make([]string, 0, len(storage.Flashcards))
+	for key := range storage.Flashcards {
 		keys = append(keys, key)
 	}
 

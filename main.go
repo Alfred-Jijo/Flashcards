@@ -9,11 +9,12 @@ import (
 )
 
 func main() {
+	//flach cuz naming clash
 	flashcards := flachcards.GetFlashcards()
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
-	shuffledFlashcards := flachcards.GetShuffledFlashcards(flashcards)
+	shuffledFlashcards := flachcards.GetShuffledFlashcards()
 
 	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
 
