@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	handle "github.com/Drill-Byte/cli-flashcards/errHandling"
 	flachcards "github.com/Drill-Byte/cli-flashcards/flashcards"
+	"github.com/Drill-Byte/cli-flashcards/utils"
 )
 
 func main() {
@@ -23,8 +23,8 @@ func main() {
 		answer := scanner.Text()
 		if answer == "y" {
 			succes, err := flachcards.AddFlashcard(flashcards, scanner)
-			handle.ErrHandle(err)
-			handle.SuccessHandle(succes)
+			utils.ErrHandle(err)
+			utils.SuccessHandle(succes)
 		} else if answer == "n" {
 			break
 		} else {
