@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 	"runtime"
@@ -21,4 +22,18 @@ func ClearTerminal() {
 	default:
 		runCmd("clear")
 	}
+}
+
+func ErrHandle(err error) {
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+}
+
+func SuccessHandle(success bool) {
+	if !success {
+		fmt.Println("Didnt succeed")
+	}
+	fmt.Println("Successful")
 }
