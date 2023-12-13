@@ -6,7 +6,7 @@ import (
 	"os"
 
 	flachcards "github.com/Drill-Byte/cli-flashcards/flashcards"
-	"github.com/Drill-Byte/cli-flashcards/utils"
+	utils "github.com/Drill-Byte/cli-flashcards/utils"
 )
 
 func main() {
