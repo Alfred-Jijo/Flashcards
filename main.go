@@ -31,7 +31,7 @@ func main() {
 			fmt.Println("Invalid input. Please enter 'y' or 'n'.")
 		}
 	}
-	shuffledFlashcards := flachcards.GetShuffledFlashcards()
+	shuffledFlashcards := flachcards.GetShuffledFlashcards(flashcards)
 
 	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
 

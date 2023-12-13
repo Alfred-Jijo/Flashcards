@@ -14,8 +14,8 @@ func GetFlashcards() map[string]storage.Flashcard {
 	return storage.Flashcards
 }
 
-func GetShuffledFlashcards() []string {
-	keys := make([]string, 0, len(storage.Flashcards))
+func GetShuffledFlashcards(flashcards map[string]storage.Flashcard) []string {
+	keys := make([]string, 0, len(flashcards))
 	for key := range storage.Flashcards {
 		keys = append(keys, key)
 	}
@@ -44,11 +44,11 @@ func PrintFlashCards(
 	}
 }
 
-func AddFlashcard(Flashcards map[string]storage.Flashcard, scanner *bufio.Scanner) (bool, error) {
+func AddFlashcard(flashcards map[string]storage.Flashcard, scanner *bufio.Scanner) (bool, error) {
 
-	var key = fmt.Sprintf("Question_%d", len(Flashcards)+1)
+	var key = fmt.Sprintf("Question_%d", len(flashcards)+1)
 
-	if _, exists := Flashcards[key]; exists {
+	if _, exists := flashcards[key]; exists {
 		return false, fmt.Errorf("flashcard with the key '%s' already exists", key)
 	}
 
@@ -65,7 +65,7 @@ func AddFlashcard(Flashcards map[string]storage.Flashcard, scanner *bufio.Scanne
 		Answer:   answer,
 	}
 
-	Flashcards[key] = newFlashcard
+	flashcards[key] = newFlashcard
 
 	fmt.Println("Flashcard added successfully!")
 	return true, nil
