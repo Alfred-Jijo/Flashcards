@@ -13,7 +13,7 @@ func GetFlashcards() map[string]storage.Flashcard {
 
 func GetShuffledFlashcards(flashcards map[string]storage.Flashcard) []string {
 	keys := make([]string, 0, len(flashcards))
-	for key := range storage.Flashcards {
+	for key := range flashcards {
 		keys = append(keys, key)
 	}
 
