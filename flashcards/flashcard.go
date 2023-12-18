@@ -44,7 +44,10 @@ func PrintFlashCards(
 	}
 }
 
-func AddFlashcard(flashcards map[string]storage.Flashcard, scanner *bufio.Scanner) error {
+func AddFlashcard(
+	flashcards map[string]storage.Flashcard,
+	scanner *bufio.Scanner,
+) error {
 
 	var key = fmt.Sprintf("Question_%d", len(flashcards)+1)
 
