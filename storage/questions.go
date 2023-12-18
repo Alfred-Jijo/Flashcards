@@ -1,10 +1,5 @@
 package storage
 
-type Flashcard struct {
-	Question string
-	Answer   string
-}
-
 var Flashcards = map[string]Flashcard{
 	"Question_One": {
 		Question: "What is a Quantity",
