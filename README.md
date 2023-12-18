@@ -4,7 +4,7 @@
 This program implements a simple flashcard quiz using the command line interface. Users can add flashcards with questions and answers, shuffle them, and quiz themselves. The flashcards are stored in a predefined set.
 
 ## Starting Out
-- Use the `init` when prompted for new flashcards to clear the current set fo flashcards.
+- Use the `init` command when prompted for new flashcards to clear the current set fo flashcards.
 
 ## How to Use
 
