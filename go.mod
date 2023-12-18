@@ -1,3 +1,3 @@
-module github.com/Drill-Byte/cli-flashcards
+module github.com/epicnotgames/cli-flashcards
 
 go 1.21.5

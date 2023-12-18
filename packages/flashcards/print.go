@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"fmt"
 
-	"github.com/Drill-Byte/cli-flashcards/packages/storage"
-	"github.com/Drill-Byte/cli-flashcards/packages/utils"
+	"github.com/epicnotgames/cli-flashcards/packages/storage"
+	"github.com/epicnotgames/cli-flashcards/packages/utils"
 )
 
 func PrintFlashCards(
