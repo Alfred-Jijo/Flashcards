@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"fmt"
 
-	"github.com/Drill-Byte/cli-flashcards/storage"
-	"github.com/Drill-Byte/cli-flashcards/utils"
+	"github.com/Drill-Byte/cli-flashcards/packages/storage"
+	"github.com/Drill-Byte/cli-flashcards/packages/utils"
 )
 
 func PrintFlashCards(

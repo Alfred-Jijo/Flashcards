@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 
-	"github.com/Drill-Byte/cli-flashcards/storage"
+	"github.com/Drill-Byte/cli-flashcards/packages/storage"
 )
 
 func AddFlashcard(

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	flachcards "github.com/Drill-Byte/cli-flashcards/flashcards"
-	utils "github.com/Drill-Byte/cli-flashcards/utils"
+	flachcards "github.com/Drill-Byte/cli-flashcards/packages/flashcards"
+	utils "github.com/Drill-Byte/cli-flashcards/packages/utils"
 )
 
 func main() {
