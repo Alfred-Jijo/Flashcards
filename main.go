@@ -16,20 +16,25 @@ func main() {
 
 	fmt.Println("Welcome to the Flashcard Quiz!")
 
+	utils.ErrHandle(flachcards.LoadFlashcards())
+
 	for {
-		// !TODO: adding only works for curr session
 		fmt.Print("Would you like to add a flashcard? (y/n): ")
 		scanner.Scan()
 		answer := scanner.Text()
 		if answer == "y" {
 			err := flachcards.AddFlashcard(flashcards, scanner)
 			utils.ErrHandle(err)
+
+			// Save flashcards to file after adding
+			utils.ErrHandle(flachcards.SaveFlashcards())
 		} else if answer == "n" {
 			break
 		} else {
 			fmt.Println("Invalid input. Please enter 'y' or 'n'.")
 		}
 	}
+
 	shuffledFlashcards := flachcards.GetShuffledFlashcards(flashcards)
 
 	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
