@@ -22,9 +22,8 @@ func main() {
 		scanner.Scan()
 		answer := scanner.Text()
 		if answer == "y" {
-			succes, err := flachcards.AddFlashcard(flashcards, scanner)
+			err := flachcards.AddFlashcard(flashcards, scanner)
 			utils.ErrHandle(err)
-			utils.SuccessHandle(succes)
 		} else if answer == "n" {
 			break
 		} else {
