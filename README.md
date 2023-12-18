@@ -4,7 +4,30 @@
 This program implements a simple flashcard quiz using the command line interface. Users can add flashcards with questions and answers, shuffle them, and quiz themselves. The flashcards are stored in a predefined set.
 
 ## Starting Out
-- Use the `init` command when prompted for new flashcards to clear the current set fo flashcards.
+- If you want a fresh set of flashcards empty `flashcards.json` to look likt this:
+```
+{
+
+}
+```
+At least one flashcards must be made to start the program
+```
+{
+    "Key": { <== Key can be anything as long as it does conflict with other keys 
+        "Question":  "...", <== must have a comma
+        "Answer":  "..."
+    }
+}
+```
+Recommended json:
+```
+{
+    "Flashcard/Question 1": {
+        "Question" : "Qusetion...",
+        "Answer" : "Answer"
+    }
+}
+```
 
 ## How to Use
 
