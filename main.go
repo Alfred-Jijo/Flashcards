@@ -23,9 +23,6 @@ func main() {
 		scanner.Scan()
 		answer := scanner.Text()
 		if answer == "y" {
-			err := flachcards.AddFlashcard(flashcards, scanner)
-			utils.ErrHandle(err)
-
 			// Save flashcards to file after adding
 			utils.ErrHandle(flachcards.SaveFlashcards())
 		} else if answer == "n" {
