@@ -27,6 +27,8 @@ func main() {
 			utils.ErrHandle(flachcards.SaveFlashcards())
 		} else if answer == "n" {
 			break
+		} else if answer == "init" {
+			utils.ErrHandle(flachcards.InitFlashcards())
 		} else {
 			fmt.Println("Invalid input. Please enter 'y' or 'n'.")
 		}
