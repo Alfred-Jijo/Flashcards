@@ -26,6 +26,7 @@ func main() {
 			// Save flashcards to file after adding
 			utils.ErrHandle(flachcards.SaveFlashcards())
 		} else if answer == "n" {
+			utils.ClearTerminal()
 			break
 		} else if answer == "init" {
 			utils.ErrHandle(flachcards.InitFlashcards())
