@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/Drill-Byte/cli-flashcards/packages/storage"
+	"github.com/epicnotgames/cli-flashcards/packages/storage"
 )
 
 func GetFlashcards() map[string]storage.Flashcard {
