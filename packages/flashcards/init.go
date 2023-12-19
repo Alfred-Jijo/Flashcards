@@ -3,7 +3,7 @@ package flachcards
 import (
 	"os"
 
-	"github.com/epicnotgames/cli-flashcards/packages/utils"
+	"github.com/Drill-Byte/cli-flashcards/packages/utils"
 )
 
 //a function that clears everything in the flashcards.json

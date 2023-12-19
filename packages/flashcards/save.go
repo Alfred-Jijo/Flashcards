@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/epicnotgames/cli-flashcards/packages/storage"
+	"github.com/Drill-Byte/cli-flashcards/packages/storage"
 )
 
 func SaveFlashcards() error {
