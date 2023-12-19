@@ -1,27 +1,9 @@
 package utils
 
 import (
-	"os"
-	"os/exec"
-	"runtime"
+	"fmt"
 )
 
-func runCmd(
-	name string,
-	arg ...string,
-) {
-	cmd := exec.Command(name, arg...)
-	cmd.Stdout = os.Stdout
-	cmd.Run()
-}
-
 func ClearTerminal() {
-	switch runtime.GOOS {
-	case "linux":
-		runCmd("clear")
-	case "windows":
-		runCmd("cmd", "/c", "cls")
-	default:
-		runCmd("clear")
-	}
+    fmt.Print("\033[H\033[2J")
 }
