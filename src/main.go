@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	flachcards "github.com/epicnotgames/cli-flashcards/packages/flashcards"
-	utils "github.com/epicnotgames/cli-flashcards/packages/utils"
+	flachcards "github.com/epicnotgames/cli-flashcards/src/packages/flashcards"
+	utils "github.com/epicnotgames/cli-flashcards/src/packages/utils"
 )
 
 func main() {

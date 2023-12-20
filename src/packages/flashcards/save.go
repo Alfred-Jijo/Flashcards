@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/epicnotgames/cli-flashcards/packages/storage"
+	"github.com/epicnotgames/cli-flashcards/src/packages/storage"
 )
 
 //const flashcardsFile = "flashcards.json"
