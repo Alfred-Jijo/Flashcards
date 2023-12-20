@@ -28,7 +28,7 @@ func main() {
 		answer := scanner.Text()
 		if answer == "y" {
 			// Save flashcards to file after adding
-			utils.ErrHandle(flachcards.SaveFlashcards())
+			utils.ErrHandle(flachcards.SaveFlashcards(*fileName))
 		} else if answer == "n" {
 			utils.ClearTerminal()
 			break

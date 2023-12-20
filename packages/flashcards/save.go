@@ -10,8 +10,8 @@ import (
 
 const flashcardsFile = "flashcards.json"
 
-func SaveFlashcards() error {
-	file, err := os.Create(flashcardsFile)
+func SaveFlashcards(fileName string) error {
+	file, err := os.Create(fileName)
 	if err != nil {
 		return err
 	}
