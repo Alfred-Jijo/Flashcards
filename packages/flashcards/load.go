@@ -21,7 +21,7 @@ func LoadFlashcards(fileName string) error {
 	if err := decoder.Decode(&storage.Flashcards); err != nil {
 		return err
 	}
-
+	fmt.Printf("Loading flashcards from %s\n", fileName)
 	fmt.Println("Flashcards loaded successfully.")
 	return nil
 }
