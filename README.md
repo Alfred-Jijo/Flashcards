@@ -29,6 +29,10 @@ Recommended json:
 }
 ```
 
+## Cli Flags
+
+- you can do ```main.exe -file filename.json``` leave for flashcards.json
+
 ## How to Use
 
 1. Run the program.
