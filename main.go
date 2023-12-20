@@ -10,8 +10,6 @@ import (
 	utils "github.com/epicnotgames/cli-flashcards/packages/utils"
 )
 
-var flahcardsFolder string = "./flashcards/"
-
 func main() {
 	//flach cuz naming clash
 	flashcards := flachcards.GetFlashcards()
