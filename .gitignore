@@ -1,1 +1,7 @@
-.\main.exe
+# Ignore binary files
+*.exe
+
+# Ignore other generated files
+*.o
+*.a
+*.out
