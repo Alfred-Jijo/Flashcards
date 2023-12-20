@@ -44,6 +44,6 @@ Recommended json:
 7. Once the quiz is completed, the program will exit.
 
 ## Note
-- Adding flashcards only persists for the current session. To make permanent additions, modify the predefined set in the `storage` package.
+- New sets must be manually made via making a file called filename.json
 
 Feel free to customize and expand the flashcard set for a more comprehensive learning experience!
