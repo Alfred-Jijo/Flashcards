@@ -1,0 +1,46 @@
+From 2b6d4026be7df9d43e048e742ac272514a75490c Mon Sep 17 00:00:00 2001
+From: Alx <alxfg@purelymail.com>
+Date: Mon, 18 Dec 2023 20:25:53 +0000
+Subject: [PATCH] control sequences
+
+---
+ packages/utils/clear.go | 22 ++--------------------
+ 1 file changed, 2 insertions(+), 20 deletions(-)
+
+diff --git a/packages/utils/clear.go b/packages/utils/clear.go
+index 2ffee23..3f2c37b 100644
+--- a/packages/utils/clear.go
++++ b/packages/utils/clear.go
+@@ -1,27 +1,9 @@
+ package utils
+ 
+ import (
+-	"os"
+-	"os/exec"
+-	"runtime"
++	"fmt"
+ )
+ 
+-func runCmd(
+-	name string,
+-	arg ...string,
+-) {
+-	cmd := exec.Command(name, arg...)
+-	cmd.Stdout = os.Stdout
+-	cmd.Run()
+-}
+-
+ func ClearTerminal() {
+-	switch runtime.GOOS {
+-	case "linux":
+-		runCmd("clear")
+-	case "windows":
+-		runCmd("cmd", "/c", "cls")
+-	default:
+-		runCmd("clear")
+-	}
++    fmt.Print("\033[H\033[2J")
+ }
+-- 
+2.43.0
+
