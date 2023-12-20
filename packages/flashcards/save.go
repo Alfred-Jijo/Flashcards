@@ -8,6 +8,8 @@ import (
 	"github.com/epicnotgames/cli-flashcards/packages/storage"
 )
 
+const flashcardsFile = "flashcards.json"
+
 func SaveFlashcards() error {
 	file, err := os.Create(flashcardsFile)
 	if err != nil {

@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"os"
 
@@ -14,9 +15,12 @@ func main() {
 	flashcards := flachcards.GetFlashcards()
 	scanner := bufio.NewScanner(os.Stdin)
 
+	fileName := flag.String("file", "flashcards.json", "Specify the flashcards file name")
+	flag.Parse()
+
 	fmt.Println("Welcome to the Flashcard Quiz!")
 
-	utils.ErrHandle(flachcards.LoadFlashcards())
+	utils.ErrHandle(flachcards.LoadFlashcards(*fileName))
 
 	for {
 		fmt.Print("Would you like to add a flashcard? (y/n): ")
@@ -28,8 +32,6 @@ func main() {
 		} else if answer == "n" {
 			utils.ClearTerminal()
 			break
-		} else if answer == "init" {
-			utils.ErrHandle(flachcards.InitFlashcards())
 		} else {
 			fmt.Println("Invalid input. Please enter 'y' or 'n'.")
 		}

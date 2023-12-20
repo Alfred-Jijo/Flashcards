@@ -8,10 +8,10 @@ import (
 	"github.com/epicnotgames/cli-flashcards/packages/storage"
 )
 
-const flashcardsFile = "flashcards.json"
+// const flashcardsFile = "flashcards.json"
 
-func LoadFlashcards() error {
-	file, err := os.Open(flashcardsFile)
+func LoadFlashcards(fileName string) error {
+	file, err := os.Open(fileName)
 	if err != nil {
 		return err
 	}
