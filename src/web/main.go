@@ -1,6 +1,7 @@
 package web
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/epicnotgames/cli-flashcards/src/packages/utils"
@@ -12,4 +13,5 @@ func WebInit() {
 	http.HandleFunc("/flashcards", handlers.FlashcardsHandler)
 
 	utils.ErrHandle(http.ListenAndServe(":8080", nil))
+	fmt.Println("Web server started at http://localhost:8080")
 }
