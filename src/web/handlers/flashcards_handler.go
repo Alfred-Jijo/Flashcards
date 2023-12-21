@@ -9,9 +9,9 @@ import (
 	"github.com/epicnotgames/cli-flashcards/src/packages/utils"
 )
 
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "web/templates/index.html")
-}
+// func IndexHandler(w http.ResponseWriter, r *http.Request) {
+// 	http.ServeFile(w, r, "web/templates/index.html")
+// }
 
 func FlashcardsHandler(w http.ResponseWriter, r *http.Request) {
 	flashcards := flachcards.GetFlashcards()

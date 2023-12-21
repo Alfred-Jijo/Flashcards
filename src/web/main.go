@@ -9,8 +9,7 @@ import (
 )
 
 func WebInit() {
-	http.HandleFunc("/", handlers.IndexHandler)
-	http.HandleFunc("/flashcards", handlers.FlashcardsHandler)
+	http.HandleFunc("/", handlers.FlashcardsHandler)
 
 	utils.ErrHandle(http.ListenAndServe(":8080", nil))
 	fmt.Println("Web server started at http://localhost:8080")
