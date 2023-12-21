@@ -45,3 +45,5 @@ Recommended json:
 
 ## Note
 - New sets must be manually made via making a file called filename.json
+
+Feel free to customize and expand the flashcard set for a more comprehensive learning experience!
