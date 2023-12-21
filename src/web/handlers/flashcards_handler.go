@@ -17,7 +17,7 @@ func FlashcardsHandler(w http.ResponseWriter, r *http.Request) {
 	flashcards := flachcards.GetFlashcards()
 	shuffledFlashcards := flachcards.GetShuffledFlashcards(flashcards)
 
-	tmpl, err := template.ParseFiles("web/templates/index.html")
+	tmpl, err := template.ParseFiles("templates/index.html")
 	utils.ErrHandle(err)
 
 	data := struct {
