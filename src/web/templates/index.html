@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz</title>
+</head>
+
+<body>
+    <h1>Flashcard Quiz</h1>
+    {{range $key, $card := .Flashcards}}
+    <div>
+        <h2>{{$key}}</h2>
+        <p>Q: {{$card.Question}}</p>
+        <p>A: {{$card.Answer}}</p>
+    </div>
+    {{end}}
+</body>
+
+</html>
