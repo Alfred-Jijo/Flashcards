@@ -26,5 +26,9 @@
     "Question_2": {
         "Question": "What is a Vector",
         "Answer": "A vector is a quantity that has magnitude and direction."
+    },
+    "Question_8": {
+        "Question": "Moment (or torque) of a force.",
+        "Answer": "The moment (or torque) of a force about a point is defined as the force  the perpendicular distance from the point to the line of action of the force, i.e.   moment = F x d."
     }
 }
