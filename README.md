@@ -45,3 +45,4 @@ Recommended json:
 
 ## Note
 - New sets must be manually made via making a file called filename.json
+- Slowly working on making this a localhost website
