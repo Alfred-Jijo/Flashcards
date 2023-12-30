@@ -8,7 +8,6 @@ import (
 
 	flachcards "github.com/epicnotgames/cli-flashcards/src/packages/flashcards"
 	utils "github.com/epicnotgames/cli-flashcards/src/packages/utils"
-	web "github.com/epicnotgames/cli-flashcards/src/web"
 )
 
 func main() {
@@ -43,5 +42,4 @@ func main() {
 	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
 
 	fmt.Println("Flashcard Quiz completed. Goodbye!")
-	web.WebInit()
 }
