@@ -30,5 +30,13 @@
     "Question_8": {
         "Question": "Moment (or torque) of a force.",
         "Answer": "The moment (or torque) of a force about a point is defined as the force  the perpendicular distance from the point to the line of action of the force, i.e.   moment = F x d."
+    },
+    "Question_9": {
+        "Question": "The principle of Moments",
+        "Answer": "The principle of moments. For a system to be in equilibrium, The sum of anticlockwise moments about a point = The sum of clockwise moments about the same point."
+    },
+    "Question_10": {
+        "Question": "What is a Force",
+        "Answer": "Force is a force or a force vector"
     }
 }
