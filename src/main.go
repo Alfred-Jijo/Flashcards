@@ -41,5 +41,5 @@ func main() {
 
 	flachcards.PrintFlashCards(flashcards, shuffledFlashcards, scanner)
 
-	fmt.Println("Flashcard Quiz completed. Goodbye!")
+	fmt.Println("Flashcard Quiz completed.")
 }
